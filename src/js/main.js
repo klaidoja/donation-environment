@@ -4,7 +4,6 @@ function loadAssets() { // jshint ignore:line
         $('#pageContent').load('html/helloworld.html')
         ];
 
-    // source: http://stackoverflow.com/a/11803418
     $.when(promises).done(function () {
         console.log('Scripts loaded');
         $.holdReady(false);
