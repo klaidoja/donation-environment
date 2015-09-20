@@ -1,18 +1,12 @@
 function loadAssets() { // jshint ignore:line
     $.holdReady(true);
-    var htmlPromises = [
-        $('#pageContent').load('html/helloworld.html')
+    var promises = [
+        $('#pageContent').load('html/helloworld.html'),
+        $.getScript('js/helloWorld.js')
     ];
 
-    $.when(htmlPromises).done(function () {
-        console.log('HTML loaded');
-
-        var jsPromises = [
-            $.getScript('js/helloWorld.js')
-        ];
-        $.when(jsPromises).done(function () {
-            console.log('JS loaded');
-            $.holdReady(false);
-        });
+    $.when(promises).done(function () {
+        console.log('assets loaded');
+        $.holdReady(false);
     });
 }
