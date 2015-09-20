@@ -3,18 +3,20 @@ function handleClick() {
 
     $.ajax
     ({
-        url: 'reservebook.php',
+        url: 'http://localhost:8080/api/hello',
         type: 'get',
         success: function (result) {
-            alert('request successful' + result);
-            /*$('.modal-box').text(result).fadeIn(700, function () {
+            console.log('request successful');
+            console.log(result);
+            $('.response').text(result.key).fadeIn(700, function () {
                 setTimeout(function () {
-                    $('.modal-box').fadeOut();
-                }, 2000);
-            });*/
+                    $('.response').fadeOut();
+                }, 100000);
+            });
         },
         error: function (result) {
-            alert('request failed' + result);
+            console.log('request failed');
+            console.log(result);
         }
     });
 }
