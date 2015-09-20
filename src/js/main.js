@@ -1,16 +1,14 @@
 function loadAssets() { // jshint ignore:line
     $.holdReady(true);
+    var promises = [
+        $('#pageContent').load('html/helloworld.html')
+        ];
+
     // source: http://stackoverflow.com/a/11803418
-    $.when(
-        $('#pageContent').load('html/helloworld.html'),
-        // $.getScript( "/mypath/myscript2.js" ),
-        $.Deferred(function (deferred) {
-            $(deferred.resolve);
-        })
-    ).done(function () {
-            $.holdReady(false);
-            console.log('Scripts loaded');
-        });
+    $.when(promises).done(function () {
+        console.log('Scripts loaded');
+        $.holdReady(false);
+    });
 }
 
 function handleClick() {
@@ -37,6 +35,6 @@ function handleClick() {
 }
 
 $(document).ready(function () {
-    console.log('loaded');
+    console.log('document loaded');
     $('.request').click(handleClick);
 });
