@@ -10,7 +10,7 @@ function handleClick() {
     });
 
     $.ajax({
-        type: "POST",
+        type: 'POST',
         url: 'http://localhost:8080/api/donation',
         data: fieldValues,
         dataType: json,
