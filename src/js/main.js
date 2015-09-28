@@ -1,7 +1,7 @@
 function loadAssets() { // jshint ignore:line
     $.holdReady(true);
     var promises = [
-        $('#pageContent').load('html/helloworld.html'),
+        $('#pageContent').load('html/donationForm.html'),
         $.getScript('js/helloWorld.js')
     ];
 

@@ -1,5 +1,13 @@
 function handleClick() {
-    console.log('request on its way');
+    console.log('form inputs are gathered');
+
+    var $donationInputs = $('.donationForm :input');
+
+
+    var fieldValues = {};
+    $donationInputs.each(function() {
+        fieldValues[this.name] = $(this).val();
+    });
 
     $.ajax
     ({
@@ -23,5 +31,6 @@ function handleClick() {
 
 $(document).ready(function () {
     console.log('document loaded');
-    $('.request').click(handleClick);
+    $('.donationForm').submit(handleClick());
 });
+
