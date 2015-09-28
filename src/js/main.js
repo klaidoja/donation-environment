@@ -2,7 +2,7 @@ function loadAssets() { // jshint ignore:line
     $.holdReady(true);
     var promises = [
         $('#pageContent').load('html/donationForm.html'),
-        $.getScript('js/helloWorld.js')
+        $.getScript('js/DonationFormController.js')
     ];
 
     $.when(promises).done(function () {

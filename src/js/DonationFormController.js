@@ -9,14 +9,15 @@ function handleClick() {
         fieldValues[this.name] = $(this).val();
     });
 
-    $.ajax
-    ({
-        url: 'http://localhost:8080/api/hello',
-        type: 'get',
+    $.ajax({
+        type: "POST",
+        url: 'http://localhost:8080/api/donation',
+        data: fieldValues,
+        dataType: json,
         success: function (result) {
             console.log('request successful');
             console.log(result);
-            $('.response').text(result.key).fadeIn(700, function () {
+            $('.response').text(result).fadeIn(700, function () {
                 setTimeout(function () {
                     $('.response').fadeOut();
                 }, 100000);

@@ -1,27 +1,29 @@
-<div class="jquery-first-request">
+<div class="donationWidget">
     <h2>Dear alumni, submit your data here for a quick donation payment</h2>
 
+    <p>Some long text about this stuff</p>
+
     <form id="donationForm">
-        <fieldset>
             <label for="donorName">Name</label>
-            <input id="donorName" type='text' name="donorName" required/>
+            <input id="donorName" type='text' name="donorName" required/><br>
 
             <label for="donorEmail">E-mail</label>
-            <input id="donorEmail" type="email" name="donorEmail" required/>
+            <input id="donorEmail" type="email" name="donorEmail" required/><br>
 
             <label for="affiliation">Your affiliation with university</label>
-            <input id="affiliation" type="text" name="affiliation" required/>
+            <input id="affiliation" type="text" name="affiliation" required/><br>
 
             <label for="donationSum">Here insert the sum of donation</label>
-            <input id="donationSum" type="text" name="sum" required/>
+            <input id="donationSum" type="text" name="sum" required/><br>
 
             <label for="fundName">Fund for donation</label>
             <select id="fundName" name="fundName" required>
                 <option value="Scholarship" selected="selected">Scholarship</option>
                 <option value="Bribe">Bribe</option>
-            </select>
+            </select><br>
 
             <input type='submit'/>
-        </fieldset>
     </form>
+
+    <div id="response"></div>
 </div>
