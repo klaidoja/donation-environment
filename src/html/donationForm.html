@@ -4,7 +4,9 @@
 
 
     <form id="donationForm">
-            <p>PLEASE FILL PERSONAL INFORMATION</p>
+        <p>PLEASE FILL PERSONAL INFORMATION</p>
+
+        <div style="border: 5px dotted #660099;  display:inline-table; padding:1cm; line-height: 30px">
             <label for="donorName">Name</label><br>
             <input id="donorName" type='text' name="donorName" required/><br>
 
@@ -13,8 +15,11 @@
 
             <label for="affiliation">Your affiliation with university</label><br>
             <input id="affiliation" type="text" name="affiliation" required/><br>
+            </div>
 
             <p>PLEASE FILL DONATION INFORMATION</p>
+             <div style="border: 5px dotted #660099;  display:inline-table; padding:1cm; margin:5px; line-height:30px">
+
             <label for="donationSum">Here insert the sum of donation</label><br>
             <input id="donationSum" type="text" name="sum" required/><br>
 
@@ -23,6 +28,8 @@
                 <option value="Scholarship" selected="selected">Scholarship</option>
                 <option value="Bribe">Bribe</option>
             </select><br>
+                </div>
+            <br>
 
             <input type='submit'/>
     </form>
