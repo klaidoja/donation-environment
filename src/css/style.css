@@ -1,0 +1,19 @@
+main {
+    text-align:center;
+}
+
+#personal {
+    border: 5px dotted #660099;
+    display:inline-table;
+    padding:1cm;
+    line-height: 30px
+}
+
+#donation {
+    border: 5px dotted #660099;
+    display: inline-table;
+    padding: 1cm;
+    margin: 5px;
+    line-height: 30px;
+}
+
