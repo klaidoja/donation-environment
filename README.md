@@ -6,7 +6,7 @@
 
 Siim Valdaru, Silver Palumaa, Sten Mõtus, Kadi Laidoja
 
-#Technologies used in FE
+## Technologies used in FE
 
 We use HTML5, JQuery, npm, bower and Bootstrap 3
 
