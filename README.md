@@ -4,10 +4,10 @@
 
 ## Team members are
 
-Siim Valdaru - back-end developer, architect
-Silver Palumaa - back- and front-end developer
-Sten Mõtus - lead tester, front-end developer
-Kadi Laidoja - project manager, analyst, lead designer
+Siim Valdaru - back-end developer, architect  
+Silver Palumaa - back- and front-end developer  
+Sten Mõtus - lead tester, front-end developer  
+Kadi Laidoja - project manager, analyst, lead designer  
 
 ## Technologies used in FE
 
