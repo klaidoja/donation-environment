@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path');
 
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -17,6 +18,11 @@ var dirs = pkg['h5bp-configs'].directories;
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
 // ---------------------------------------------------------------------
+
+
+var config = {
+    bootstrapDir: './bower_components/bootstrap-sass'
+};
 
 gulp.task('archive:create_archive_dir', function () {
     fs.mkdirSync(path.resolve(dirs.archive), '0755');
@@ -65,14 +71,28 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('copy', [
+    'copy:.css',
     'copy:.htaccess',
     'copy:index.html',
     'copy:jquery',
     'copy:license',
-    'copy:main.css',
-    'copy:misc',
-    'copy:normalize'
+    'copy:misc'
 ]);
+
+gulp.task('copy:.css', function() {
+    return gulp.src(dirs.src + '/css/styles.scss')
+        .pipe(sass({
+            includePaths: [config.bootstrapDir + '/assets/stylesheets']
+        }))
+        .pipe(gulp.dest(dirs.dist + '/css'));
+});
+
+gulp.task('copy:.fonts', function() {
+    return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
+        .pipe(gulp.dest(dirs.dist + '/fonts'));
+});
+
+
 
 gulp.task('copy:.htaccess', function () {
     return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
@@ -97,20 +117,6 @@ gulp.task('copy:license', function () {
                .pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task('copy:main.css', function () {
-
-    var banner = '/*! HTML5 Boilerplate v' + pkg.version +
-                    ' | ' + pkg.license.type + ' License' +
-                    ' | ' + pkg.homepage + ' */\n\n';
-
-    return gulp.src(dirs.src + '/css/main.css')
-               .pipe(plugins.header(banner))
-               .pipe(plugins.autoprefixer({
-                   browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
-                   cascade: false
-               }))
-               .pipe(gulp.dest(dirs.dist + '/css'));
-});
 
 gulp.task('copy:misc', function () {
     return gulp.src([
@@ -120,7 +126,7 @@ gulp.task('copy:misc', function () {
 
         // Exclude the following files
         // (other tasks will handle the copying of these files)
-        '!' + dirs.src + '/css/main.css',
+        '!' + dirs.src + '/css/styles.scss',
         '!' + dirs.src + '/index.html'
 
     ], {
@@ -131,10 +137,6 @@ gulp.task('copy:misc', function () {
     }).pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task('copy:normalize', function () {
-    return gulp.src('node_modules/normalize.css/normalize.css')
-               .pipe(gulp.dest(dirs.dist + '/css'));
-});
 
 gulp.task('lint:js', function () {
     return gulp.src([
