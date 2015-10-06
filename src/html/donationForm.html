@@ -1,38 +1,50 @@
 <div class="donationWidget">
-    <h2>Dear alumni, submit your data here for a quick donation payment</h2>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-4 col-lg-push-4">
+                <h2>Dear alumni, submit your data here for a quick donation payment</h2>
 
 
 
-    <form id="donationForm">
-        <p>PLEASE FILL PERSONAL INFORMATION</p>
+                    <form id="donationForm">
 
-        <div id="personal">
-            <label for="donorName">Name</label><br>
-            <input id="donorName" type='text' name="donorName" required/><br>
+                        <p>PLEASE FILL PERSONAL INFORMATION</p>
 
-            <label for="donorEmail">E-mail</label><br>
-            <input id="donorEmail" type="email" name="donorEmail" required/><br>
 
-            <label for="affiliation">Your affiliation with university</label><br>
-            <input id="affiliation" type="text" name="affiliation" required/><br>
-            </div>
+                        <div id="personal">
+                            <label for="donorName">Name</label><br>
+                            <input id="donorName" type='text' name="donorName" class="form-control" required/>
 
-            <p>PLEASE FILL DONATION INFORMATION</p>
-             <div id="donation">
+                            <label for="donorEmail">E-mail</label><br>
+                            <input id="donorEmail" type="email" name="donorEmail" class="form-control" required/><br>
 
-            <label for="donationSum">Here insert the sum of donation</label><br>
-            <input id="donationSum" type="text" name="sum" required/><br>
+                            <label for="affiliation">Your affiliation with university</label><br>
+                            <input id="affiliation" type="text" name="affiliation" class="form-control" required/><br>
+                            </div>
 
-            <label for="fundName">Fund for donation</label><br>
-            <select id="fundName" name="fundName" required>
-                <option value="Scholarship" selected="selected">Scholarship</option>
-                <option value="Bribe">Bribe</option>
-            </select><br>
+                            <p>PLEASE FILL DONATION INFORMATION</p>
+                             <div id="donation">
+
+                            <label for="donationSum">Here insert the sum of donation</label><br>
+                            <input id="donationSum" type="text" name="sum" class="form-control" required/><br>
+
+                            <label for="fundName">Fund for donation</label><br>
+                                 <div class="dropdown">
+                                 <button class="btn btn-default dropdown-toggle" id="fundName" type="button" data-toggle="dropdown">
+                                    Select fund<span class="caret"></span></button>
+                                 <ul class="dropdown-menu" role="menu" aria-labelledby="fundName">
+                                        <li role="presentation"><a role="menuitem">Scholarship</a></li>
+                                        <li role="presentation"><a role="menuitem">Pizza</a></li>
+                                        <li role="presentation"><a role="menuitem">Sport</a></li>
+                                        <li role="presentation"><a role="menuitem">Playstation for every1</a></li>
+                                    </ul>
+                                </div>
+                             </div>
+                            <br>
+                        <input class="btn btn-primary" type='submit'/>
+                      </form>
                 </div>
-            <br>
-
-            <input type='submit'/>
-    </form>
-
+            </div>
+        </div>
     <div id="response"></div>
 </div>
