@@ -1,15 +1,19 @@
 <div class="donationWidget">
     <div class="container">
         <div class="row">
-            <div  class="col-xs-3 col-xs-6 col-xs-3 col-xs-push-3">
+            <div  class="col-sm-2 col-sm-8 col-sm-2 col-sm-push-2">
+                <div class="jumbotron" id="jumbo">
                 <h2>Dear alumni, submit your data here for a quick donation payment</h2>
-                <form id="donationForm">
+
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis ipsum. Suspendisse iaculis risus in libero maximus, eget euismod mauris imperdiet. Quisque facilisis velit quis erat posuere fermentum. Nunc sollicitudin ultrices neque eget dapibus. Nunc erat erat, faucibus in ligula vel, tincidunt sagittis leo. Duis rutrum est augue, eu fringilla risus faucibus sit amet. Aliquam sit amet ipsum vestibulum, tempus turpis nec, sollicitudin tellus. Phasellus luctus malesuada lectus. Integer et nibh et urna laoreet dapibus. Morbi tempor nisl id dolor vestibulum, ut elementum justo posuere. Aliquam ligula magna, ultricies non iaculis id, aliquet at odio.</p>
-
+                        </div>
+                    <div class="jumbotron">
+                     <form id="donationForm">
                         <div id="personal">
+                            <h2>Please fill information</h2><br>
                             <label for="donorName">Name</label><br>
-                            <input id="donorName" type='text' name="donorName" class="form-control" placeholder="Insert name" required/>
+                            <input id="donorName" type='text' name="donorName" class="form-control" placeholder="Insert name" required/><br>
 
                             <label for="donorEmail">E-mail</label><br>
                             <input id="donorEmail" type="email" name="donorEmail" class="form-control" placeholder="Insert e-mail" required/><br>
@@ -20,7 +24,7 @@
                                 <option>Alumni</option>
                                 <option>Student</option>
                                 <option>None</option>
-                            </select>
+                            </select><br>
 
                             <label>Additional information</label><br>
                             <textarea class="form-control" rows="5" placeholder="Insert additional information"></textarea><br>
@@ -30,7 +34,7 @@
                                 <label class="radio-inline">
                                     <input type="radio">Institute of Computer Science</label>
                                 <label class="radio-inline">
-                                    <input type="radio">TÜ Sihtasutus</label><br>
+                                    <input type="radio">TÜ Sihtasutus</label><br><br>
 
 
 
@@ -46,8 +50,8 @@
                             <br>
                         <input class="btn btn-success" type='submit'/>
                       </form>
-                </div>
             </div>
+                </div>
         </div>
     <div id="response"></div>
 </div>
