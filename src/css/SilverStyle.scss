@@ -4,12 +4,21 @@
 }
 
 #jumbo {
+    background-color: white;
     h2 {
         font-size: 2em;
+        color: #0040D0;
     }
     p {
         font-size: 1.2em;
             }
+}
+#jumbo2 {
+    background-color: white;
+    h2 {
+        font-family: sans-serif;
+        color: #0040D0;
+    }
 }
 
 #fundName, #affi {
@@ -21,5 +30,5 @@
 }
 
 body {
-    background-color: #645161;
+    background-color: #f1f1f1;
 }
