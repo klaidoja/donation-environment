@@ -1,7 +1,7 @@
 <div class="donationWidget">
-    <div class="container text-center">
+    <div class="container">
         <div class="row">
-            <div class="col-xs-3 col-xs-6 col-xs-3 col-xs-push-3">
+            <div  class="col-xs-3 col-xs-6 col-xs-3 col-xs-push-3">
                 <h2>Dear alumni, submit your data here for a quick donation payment</h2>
                 <form id="donationForm">
 
@@ -14,32 +14,33 @@
                             <label for="donorEmail">E-mail</label><br>
                             <input id="donorEmail" type="email" name="donorEmail" class="form-control" placeholder="Insert e-mail" required/><br>
 
-                            <label>Your affiliation with university</label><br>
-                             <div id="donation">
-                                 <div class="dropdown">
-                                     <button class="btn btn-default dropdown-toggle" id="affi" type="button" data-toggle="dropdown">
-                                        Choose your affilation<span class="caret"></span></button>
-                                     <ul class="dropdown-menu" role="menu" aria-labelledby="affi">
-                                         <li role="presentation"><a role="menuitem">Alumni</a></li>
-                                         <li role="presentation"><a role="menuitem">Student</a></li>
-                                     </ul>
-                                     </div>
+                            <label for="affilation">Choose your affilation with university</label><br>
+                            <select class="form-control" id="affilation">
+                                <option disabled selected></option>
+                                <option>Alumni</option>
+                                <option>Student</option>
+                                <option>None</option>
+                            </select>
 
                             <label>Additional information</label><br>
-                                 <textarea class="form-control" rows="5"></textarea><br>
+                            <textarea class="form-control" rows="5" placeholder="Insert additional information"></textarea><br>
+
+                            <div id="donation">
+                            <label>Choose destination</label><br>
+                                <label class="radio-inline">
+                                    <input type="radio">Institute of Computer Science</label>
+                                <label class="radio-inline">
+                                    <input type="radio">TÜ Sihtasutus</label><br>
+
 
 
                             <label for="fundName">Fund for donation</label><br>
-                                 <div class="dropdown">
-                                 <button class="btn btn-default dropdown-toggle" id="fundName" type="button" data-toggle="dropdown">
-                                    Select fund<span class="caret"></span></button>
-                                 <ul class="dropdown-menu" role="menu" aria-labelledby="fundName">
-                                        <li role="presentation"><a role="menuitem">Scholarship</a></li>
-                                        <li role="presentation"><a role="menuitem">Pizza</a></li>
-                                        <li role="presentation"><a role="menuitem">Sport</a></li>
-                                        <li role="presentation"><a role="menuitem">Playstation for every1</a></li>
-                                    </ul>
-                                </div>
+                                <select class="form-control" id="fundName">
+                                    <option disabled selected></option>
+                                    <option>Scholarship</option>
+                                    <option>Pizza</option>
+                                    <option>Sport</option>
+                                </select>
                                  </div>
                              </div>
                             <br>
