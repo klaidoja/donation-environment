@@ -76,7 +76,8 @@ gulp.task('copy', [
     'copy:index.html',
     'copy:jquery',
     'copy:license',
-    'copy:misc'
+    'copy:misc',
+    'copy:bootstrapJs'
 ]);
 
 gulp.task('copy:.css', function() {
@@ -110,6 +111,11 @@ gulp.task('copy:jquery', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
                .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
                .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+});
+
+gulp.task('copy:bootstrapJs', function () {
+    return gulp.src(config.bootstrapDir + '/assets/javascripts/bootstrap.js')
+        .pipe(gulp.dest(dirs.dist + '/js'));
 });
 
 gulp.task('copy:license', function () {
