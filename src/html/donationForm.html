@@ -18,27 +18,28 @@
                             <label for="donorEmail">E-mail</label><br>
                             <input id="donorEmail" type="email" name="donorEmail" class="form-control" placeholder="Insert e-mail" required/><br>
 
-                            <label for="affilation">Choose your affilation with university</label><br>
-                            <select class="form-control" id="affilation">
-                                <option disabled selected></option>
-                                <option>Alumni</option>
-                                <option>Student</option>
-                                <option>None</option>
-                            </select><br>
+
 
                             <label>Additional information</label><br>
                             <textarea class="form-control" rows="5" placeholder="Insert additional information"></textarea><br>
 
+                            <div class="checkbox">
+                                <label><input type="checkbox">My name can be published bt the Institue of Computer Science </label>
+                            </div>
+
+                            <hr>
+
+
                             <div id="donation">
                             <label>Choose destination</label><br>
                                 <label class="radio-inline">
-                                    <input type="radio">Institute of Computer Science</label>
+                                    <input type="radio" required>Institute of Computer Science</label>
                                 <label class="radio-inline">
                                     <input type="radio">TÜ Sihtasutus</label><br><br>
 
 
 
-                            <label for="fundName">Fund for donation</label><br>
+                            <label for="fundName">Donation purpose</label><br>
                                 <select class="form-control" id="fundName">
                                     <option disabled selected></option>
                                     <option>Scholarship</option>
@@ -48,7 +49,9 @@
                                  </div>
                              </div>
                             <br>
-                        <input class="btn btn-success" type='submit'/>
+                         <div class="keskele">
+                        <input class="btn btn-primary btn-lg sharp" type='submit'/>
+                             </div>
                       </form>
             </div>
                 </div>
