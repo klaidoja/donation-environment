@@ -1,32 +1,23 @@
 .container {
     padding-top: 5px;
     padding-bottom: 5px;
+
 }
 
 #jumbo {
     background-color: white;
     align-content: center;
-    h2 {
-        font-size: 2em;
+    h3 {
+        font-family: 'Arimo', sans-serif;
         color: #0040D0;
     }
     p {
-        font-size: 1.2em;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.1em;
             }
 }
 .keskele {
     text-align: center;
-}
-#jumbo2 {
-    background-color: white;
-    h2 {
-        font-family: sans-serif;
-        color: #0040D0;
-    }
-}
-
-#fundName, #affi {
-    width: 100%;
 }
 
 .dropdown-menu {
