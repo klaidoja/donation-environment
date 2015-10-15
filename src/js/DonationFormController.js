@@ -3,9 +3,8 @@ function handleClick() {
 
     var $donationInputs = $('.donationForm :input');
 
-
     var fieldValues = {};
-    $donationInputs.each(function() {
+    $donationInputs.each(function () {
         fieldValues[this.name] = $(this).val();
     });
 
@@ -32,6 +31,7 @@ function handleClick() {
 
 $(document).ready(function () {
     console.log('document loaded');
-    $('.donationForm').submit(handleClick());
+    // $('.donationForm').submit(handleClick());
+    $('.btn-lg').on('click', handleClick);
 });
 
