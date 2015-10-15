@@ -31,7 +31,6 @@ function handleClick() {
 
 $(document).ready(function () {
     console.log('document loaded');
-    // $('.donationForm').submit(handleClick());
-    $('.btn-lg').on('click', handleClick);
+    $('.donationForm').on('submit', handleClick);
 });
 

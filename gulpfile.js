@@ -80,7 +80,7 @@ gulp.task('copy', [
     'copy:bootstrapJs'
 ]);
 
-gulp.task('copy:.css', function() {
+gulp.task('copy:.css', function () {
     return gulp.src(dirs.src + '/css/styles.scss')
         .pipe(sass({
             includePaths: [config.bootstrapDir + '/assets/stylesheets']
@@ -88,29 +88,28 @@ gulp.task('copy:.css', function() {
         .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
-gulp.task('copy:.fonts', function() {
+gulp.task('copy:.fonts', function () {
     return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
         .pipe(gulp.dest(dirs.dist + '/fonts'));
 });
 
 
-
 gulp.task('copy:.htaccess', function () {
     return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
-               .pipe(plugins.replace(/# ErrorDocument/g, 'ErrorDocument'))
-               .pipe(gulp.dest(dirs.dist));
+        .pipe(plugins.replace(/# ErrorDocument/g, 'ErrorDocument'))
+        .pipe(gulp.dest(dirs.dist));
 });
 
 gulp.task('copy:index.html', function () {
     return gulp.src(dirs.src + '/index.html')
-               .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.devDependencies.jquery))
-               .pipe(gulp.dest(dirs.dist));
+        .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.devDependencies.jquery))
+        .pipe(gulp.dest(dirs.dist));
 });
 
 gulp.task('copy:jquery', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
-               .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
-               .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+        .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
+        .pipe(gulp.dest(dirs.dist + '/js/vendor'));
 });
 
 gulp.task('copy:bootstrapJs', function () {
@@ -120,7 +119,7 @@ gulp.task('copy:bootstrapJs', function () {
 
 gulp.task('copy:license', function () {
     return gulp.src('LICENSE.txt')
-               .pipe(gulp.dest(dirs.dist));
+        .pipe(gulp.dest(dirs.dist));
 });
 
 
@@ -149,9 +148,10 @@ gulp.task('lint:js', function () {
         'gulpfile.js',
         dirs.src + '/js/*.js',
         dirs.test + '/*.js'
-    ]).pipe(plugins.jscs())
-      .pipe(plugins.jshint())
-      .pipe(plugins.jshint.reporter('jshint-stylish'));
+    ])
+        .pipe(plugins.jscs())
+        .pipe(plugins.jshint())
+        .pipe(plugins.jshint.reporter('jshint-stylish'));
 });
 
 
@@ -164,14 +164,14 @@ gulp.task('archive', function (done) {
         'build',
         'archive:create_archive_dir',
         'archive:zip',
-    done);
+        done);
 });
 
 gulp.task('build', function (done) {
     runSequence(
         ['clean', 'lint:js'],
         'copy',
-    done);
+        done);
 });
 
 gulp.task('default', ['build']);
