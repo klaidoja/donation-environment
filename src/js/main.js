@@ -3,7 +3,8 @@ function loadAssets() { // jshint ignore:line
     var promises = [
         $('#pageContent').load('html/donationForm.html'),
         $.getScript('js/DonationFormController.js'),
-        $.getScript('js/FormDataInitController.js')
+        $.getScript('js/FormDataInitController.js'),
+        $.getScript('js/FacultyChangeListenerRegistrar.js')
     ];
 
     $.when(promises).done(function () {

@@ -33,4 +33,3 @@ $(document).ready(function () {
     console.log('document loaded');
     $('.donationForm').on('submit', handleClick);
 });
-
