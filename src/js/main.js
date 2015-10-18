@@ -4,7 +4,8 @@ function loadAssets() { // jshint ignore:line
         $('#pageContent').load('html/donationForm.html'),
         $.getScript('js/DonationFormController.js'),
         $.getScript('js/FormDataInitController.js'),
-        $.getScript('js/FacultyChangeListenerRegistrar.js')
+        $.getScript('js/FacultyChangeListenerRegistrar.js'),
+        $.getScript('js/admin.js')
     ];
 
     $.when(promises).done(function () {
@@ -13,14 +14,3 @@ function loadAssets() { // jshint ignore:line
     });
 }
 
-function loadAssetsAdmin() {
-    $.holdReady(true);
-    var promisesAdmin = [
-        $('#pageContent').load('html/adminPage.html')
-    ];
-
-    $.when(promisesAdmin).done(function () {
-        console.log('admin loaded');
-        $holdReady(false);
-    })
-}
