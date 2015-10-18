@@ -5,7 +5,7 @@ function loadAssets() { // jshint ignore:line
         $.getScript('js/DonationFormController.js'),
         $.getScript('js/FormDataInitController.js'),
         $.getScript('js/FacultyChangeListenerRegistrar.js'),
-        $.getScript('js/admin.js')
+        $.getScript('js/OtherPages.js')
     ];
 
     $.when(promises).done(function () {

@@ -25,8 +25,8 @@
                     <span class="glyphicon glyphicon-th"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="http://cs.ut.ee">Logout</a></li>
+                    <li><a onclick="loadAssetsSettings()">Settings</a></li>
                 </ul>
             </li>
         </ul>
@@ -34,18 +34,49 @@
 </nav>
 <body>
 <div class="container">
-    <table class="table table-hover">
+    <div class="row">
+            <div class="jumbotron" id="jumbo">
+    <h3>Donation history</h3>
+    <table class="table table-hover" data-sort-name="name" data-sort-order="desc">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Donor Name</th>
-                <th>Fund</th>
-                <th>Donation Purpose</th>
-                <th>Name published</th>
+                <th data-sortable="true">Date</th>
+                <th data-sortable="true">Donor Name</th>
+                <th data-sortable="true">Fund</th>
+                <th data-sortable="true">Donation Purpose</th>
+                <th data-sortable="true">Name published</th>
                 <th>Additional info</th>
             </tr>
         </thead>
+        <tbody>
+            <tr>
+                <td>18.10.2015</td>
+                <td>Kadi Laidoja</td>
+                <td>TÜ Sihasutus</td>
+                <td>More pizza</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18.10.2015</td>
+                <td>Sten Mõtus</td>
+                <td>TÜ Sihasutus</td>
+                <td>Free beer 4 every1</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18.10.2015</td>
+                <td>Siim Valdaru</td>
+                <td>ICS</td>
+                <td>Debian rules</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+        </tbody>
     </table>
+</div>
+</div>
 </div>
 </body>
 </html>
