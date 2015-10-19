@@ -1,35 +1,43 @@
-function handleClick() {
-    console.log('form inputs are gathered');
+$('#donationForm').on('submit', function (e) {
+    e.preventDefault();
 
-    var $donationInputs = $('.donationForm :input');
+    console.log('form will now be gathered');
 
     var fieldValues = {};
-    $donationInputs.each(function () {
-        fieldValues[this.name] = $(this).val();
-    });
+    /*
+     $donationInputs.each(function () {
+     console.log($(this).data());
+     fieldValues[this.name] = $(this).val();
+     });
+     */
+    fieldValues['nameIsPublic'] = $('#nameIsPublic').is(':checked');
+    fieldValues['name'] = $('#donorName').val();
+    fieldValues['email'] = $('#donorEmail').val();
+    fieldValues['additionalInformation'] = $('#additionalInformation').val();
+    var fundName = $('#fundName').val();
+    fieldValues['fund'] = $('.fundNameData').text(fundName).data().id;
+    fieldValues['faculty'] = $('input[name=faculty]:checked', '#donationForm').data().id;
 
+
+    console.log('These are the values gotten with FOR EACH: ');
+    console.log(fieldValues);
+
+    alert('Input values are now gathered and shown in the console');
+    alert(fieldValues);
     $.ajax({
-        type: 'POST',
+        type: 'post',
         url: 'http://localhost:8080/api/donation',
         data: fieldValues,
-        dataType: json,
+        contentType: "application/json; charset=utf-8",
+        dataType: JSON,
         success: function (result) {
             console.log('request successful');
             console.log(result);
-            $('.response').text(result).fadeIn(700, function () {
-                setTimeout(function () {
-                    $('.response').fadeOut();
-                }, 100000);
-            });
         },
         error: function (result) {
-            console.log('request failed');
+            alert('I failed massively!');
             console.log(result);
         }
     });
-}
-
-$(document).ready(function () {
-    console.log('document loaded');
-    $('.donationForm').on('submit', handleClick);
 });
+

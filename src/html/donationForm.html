@@ -42,7 +42,7 @@
                     </p>
 
 
-                    <form id="donationForm" novalidate>
+                    <form id="donationForm">
                         <div id="personal">
                             <h3>Please fill information</h3><br>
                             <label for="donorName">Name</label><br>
@@ -52,11 +52,11 @@
                             <input id="donorEmail" type="email" name="email" class="form-control" placeholder="Insert e-mail" required/><br>
 
 
-                            <label>Additional information</label><br>
-                            <textarea class="form-control" rows="5" placeholder="Insert additional information" name="additionalInformation"></textarea><br>
+                            <label for="additionalInformation">Additional information</label><br>
+                            <textarea id="additionalInformation" class="form-control" rows="5" placeholder="Insert additional information" name="additionalInformation"></textarea><br>
 
                             <div class="checkbox">
-                                <label><input type="checkbox" name="nameIsPublic">My name can be published bt the Institue of Computer Science </label>
+                                <label><input type="checkbox" id="nameIsPublic" name="nameIsPublic">My name can be published bt the Institue of Computer Science </label>
                             </div>
 
                             <hr>
@@ -70,7 +70,7 @@
 
 
                                 <label>Donation purpose</label><br>
-                                <select class="form-control" id="fundName" name="fund">
+                                <select class="form-control" id="fundName" name="fund" required>
                                     <option disabled selected></option>
                                 </select>
                             </div>
@@ -78,7 +78,7 @@
                         <br>
 
                         <div class="keskele">
-                            <input class="btn btn-primary btn-lg sharp" type='submit'/>
+                            <input id="donationSubmitButton" class="btn btn-primary btn-lg sharp" type="submit"/>
                         </div>
                     </form>
                 </div>
