@@ -1,3 +1,18 @@
+var successFunction = function (data, textStatus, jqXHR) {
+    alert('Donation wish saved');
+    console.log(data);
+};
+
+var notFoundFunction = function (data, textStatus, jqXHR) {
+    alert('This API endpoint was not found!');
+};
+
+var validationFailedFunction = function(data, textStatus, jqXHR){
+    var errorData = data.responseText.errors;
+    alert(errorData);
+    console.log(data);
+};
+
 $('#donationForm').on('submit', function (e) {
     e.preventDefault();
 
@@ -15,13 +30,12 @@ $('#donationForm').on('submit', function (e) {
         url: 'http://localhost:8080/api/donation',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(fieldValues),
-        dataType: JSON
-    }).done(function (result) {
-        alert('request successful');
-        console.log(result);
-    }).fail(function (result) {
-        alert('request failed');
-        console.log(result);
-    });
+        dataType: JSON,
+        statusCode: {
+            201: successFunction,
+            404: notFoundFunction,
+            422: validationFailedFunction
+        }
+    })
 });
 
