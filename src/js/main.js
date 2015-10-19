@@ -4,7 +4,8 @@ function loadAssets() { // jshint ignore:line
         $('#pageContent').load('html/donationForm.html'),
         $.getScript('js/DonationFormController.js'),
         $.getScript('js/FormDataInitController.js'),
-        $.getScript('js/FacultyChangeListenerRegistrar.js')
+        $.getScript('js/FacultyChangeListenerRegistrar.js'),
+        $.getScript('js/OtherPages.js')
     ];
 
     $.when(promises).done(function () {
@@ -12,3 +13,4 @@ function loadAssets() { // jshint ignore:line
         $.holdReady(false);
     });
 }
+

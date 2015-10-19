@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="pull-left" href="#">
+                <img src="ATI_logo.png" alt="Brand" class="img-responsive">
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                    <span class="glyphicon glyphicon-th"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://cs.ut.ee">Logout</a></li>
+                    <li><a onclick="loadAssetsSettings()">Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<body>
+<div class="container">
+    <div class="row">
+            <div class="jumbotron" id="jumbo">
+    <h3>Donation history</h3>
+    <table class="table table-hover" data-sort-name="name" data-sort-order="desc">
+        <thead>
+            <tr>
+                <th data-sortable="true">Date</th>
+                <th data-sortable="true">Donor Name</th>
+                <th data-sortable="true">Fund</th>
+                <th data-sortable="true">Donation Purpose</th>
+                <th data-sortable="true">Name published</th>
+                <th>Additional info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18.10.2015</td>
+                <td>Kadi Laidoja</td>
+                <td>TÜ Sihasutus</td>
+                <td>More pizza</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18.10.2015</td>
+                <td>Sten Mõtus</td>
+                <td>TÜ Sihasutus</td>
+                <td>Free beer 4 every1</td>
+                <td>Yes</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18.10.2015</td>
+                <td>Siim Valdaru</td>
+                <td>ICS</td>
+                <td>Debian rules</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</body>
+</html>
