@@ -1,10 +1,11 @@
 var successFunction = function (data) {
     alert('Donation wish saved');
-    var donationInformation = data;
-    console.log(data);
+    var donationInformation = JSON.parse(data.responseText);
+    console.log(donationInformation);
     var $donationFormMainContent = $('#jumbo');
     $donationFormMainContent.empty();
-    $($donationFormMainContent).append('<div>').text('Here comes the relevant info about making the donation');
+    $donationFormMainContent.append('<div>').text(donationInformation.object.fund.paymentExplanation + '\n' + donationInformation.object.facultyBankAccountNr);
+
 };
 
 var notFoundFunction = function (data) {

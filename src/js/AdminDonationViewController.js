@@ -16,7 +16,6 @@ function loadAdminDonationsView(){
                 $('<td>').text(donation.additionalInformation).appendTo($donation);
 
             });
-            //$('#adminDonationTable').append('<tr><td>my data</td><td>more data</td></tr>');
             console.log(result);
         })
         .fail(function (result) {
