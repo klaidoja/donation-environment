@@ -5,6 +5,9 @@ var successFunction = function (data) {
     var $donationFormMainContent = $('#jumbo');
     $donationFormMainContent.empty();
     $donationFormMainContent.append('<div>').text(donationInformation.object.fund.paymentExplanation + '\n' + donationInformation.object.facultyBankAccountNr);
+    var doc = new jsPDF();
+    doc.text(20, 20, 'Hello world.');
+    doc.save('Test.pdf');
 };
 
 var notFoundFunction = function (data) {
@@ -12,7 +15,7 @@ var notFoundFunction = function (data) {
     console.log(data);
 };
 
-var validationFailedFunction = function(data){
+var validationFailedFunction = function (data) {
     var errorData = data.responseText.errors;
     alert(errorData);
     console.log(data);
