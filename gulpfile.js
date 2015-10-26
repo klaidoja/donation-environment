@@ -21,8 +21,7 @@ var dirs = pkg['h5bp-configs'].directories;
 
 
 var config = {
-    bootstrapDir: './bower_components/bootstrap-sass',
-    jspdfDir: './node_modules/jspdf/dist'
+    bootstrapDir: './bower_components/bootstrap-sass'
 };
 
 gulp.task('archive:create_archive_dir', function () {
@@ -90,11 +89,6 @@ gulp.task('copy:.css', function () {
         .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
-gulp.task('copy:jspdf', function () {
-    gulp.src(config.jspdfDir)
-        .pipe(gulp.dest(dirs.dist + '/js/vendor'));
-});
-
 gulp.task('copy:.fonts', function () {
     return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
         .pipe(gulp.dest(dirs.dist + '/fonts'));
@@ -118,6 +112,12 @@ gulp.task('copy:jquery', function () {
         .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
         .pipe(gulp.dest(dirs.dist + '/js/vendor'));
 });
+
+gulp.task('copy:jspdf', function () {
+    return gulp.src(['node_modules/jspdf/dist/jspdf.min.js'])
+        .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+});
+
 
 gulp.task('copy:bootstrapJs', function () {
     return gulp.src(config.bootstrapDir + '/assets/javascripts/bootstrap.js')

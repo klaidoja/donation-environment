@@ -5,7 +5,6 @@ var successFunction = function (data) {
     var $donationFormMainContent = $('#jumbo');
     $donationFormMainContent.empty();
     $donationFormMainContent.append('<div>').text(donationInformation.object.fund.paymentExplanation + '\n' + donationInformation.object.facultyBankAccountNr);
-
 };
 
 var notFoundFunction = function (data) {
