@@ -31,57 +31,61 @@
         <div class="row">
             <div class="col-sm-2 col-sm-8 col-sm-2 col-sm-push-2">
                 <div class="jumbotron" id="jumbo">
-                    <h3>Dear alumni, submit your data here for a quick donation payment</h3>
+                    <div id="donationMainData">
+                        <h3>Dear alumni, submit your data here for a quick donation payment</h3>
 
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis ipsum. Suspendisse iaculis risus in libero maximus, eget euismod mauris imperdiet.
-                        Quisque facilisis velit quis erat posuere fermentum. Nunc sollicitudin ultrices neque eget dapibus. Nunc erat erat, faucibus in ligula vel, tincidunt
-                        sagittis leo. Duis rutrum est augue, eu fringilla risus faucibus sit amet. Aliquam sit amet ipsum vestibulum, tempus turpis nec, sollicitudin tellus.
-                        Phasellus luctus malesuada lectus. Integer et nibh et urna laoreet dapibus. Morbi tempor nisl id dolor vestibulum, ut elementum justo posuere. Aliquam
-                        ligula magna, ultricies non iaculis id, aliquet at odio.
-                    </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec mollis ipsum. Suspendisse iaculis risus in libero maximus, eget euismod mauris
+                            imperdiet.
+                            Quisque facilisis velit quis erat posuere fermentum. Nunc sollicitudin ultrices neque eget dapibus. Nunc erat erat, faucibus in ligula vel, tincidunt
+                            sagittis leo. Duis rutrum est augue, eu fringilla risus faucibus sit amet. Aliquam sit amet ipsum vestibulum, tempus turpis nec, sollicitudin tellus.
+                            Phasellus luctus malesuada lectus. Integer et nibh et urna laoreet dapibus. Morbi tempor nisl id dolor vestibulum, ut elementum justo posuere. Aliquam
+                            ligula magna, ultricies non iaculis id, aliquet at odio.
+                        </p>
 
 
-                    <form id="donationForm">
-                        <div id="personal">
-                            <h3>Please fill information</h3><br>
-                            <label for="donorName">Name</label><br>
-                            <input id="donorName" type='text' name="name" class="form-control" placeholder="Insert name" required/><br>
+                        <form id="donationForm">
+                            <div id="personal">
+                                <h3>Please fill information</h3><br>
+                                <label for="donorName">Name</label><br>
+                                <input id="donorName" type='text' name="name" class="form-control" placeholder="Insert name" required/><br>
 
-                            <label for="donorEmail">E-mail</label><br>
-                            <input id="donorEmail" type="email" name="email" class="form-control" placeholder="Insert e-mail" required/><br>
+                                <label for="donorEmail">E-mail</label><br>
+                                <input id="donorEmail" type="email" name="email" class="form-control" placeholder="Insert e-mail" required/><br>
 
 
-                            <label for="additionalInformation">Additional information</label><br>
-                            <textarea id="additionalInformation" class="form-control" rows="5" placeholder="Insert additional information" name="additionalInformation"></textarea><br>
+                                <label for="additionalInformation">Additional information</label><br>
+                                <textarea id="additionalInformation" class="form-control" rows="5" placeholder="Insert additional information"
+                                          name="additionalInformation"></textarea><br>
 
-                            <div class="checkbox">
-                                <label><input type="checkbox" id="nameIsPublic" name="nameIsPublic">My name can be published bt the Institue of Computer Science </label>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" id="nameIsPublic" name="nameIsPublic">My name can be published bt the Institue of Computer Science </label>
+                                </div>
+
+                                <hr>
+
+
+                                <div id="donation">
+                                    <label>Choose destination</label><br>
+
+
+                                    <div id="formFaculties"></div>
+                                    <br><br>
+
+
+                                    <label>Donation purpose</label><br>
+                                    <select class="form-control" id="fundName" name="fund" required>
+                                        <option disabled selected></option>
+                                    </select>
+                                </div>
                             </div>
+                            <br>
 
-                            <hr>
-
-
-                            <div id="donation">
-                                <label>Choose destination</label><br>
-
-
-                                <div id="formFaculties"></div>
-                                <br><br>
-
-
-                                <label>Donation purpose</label><br>
-                                <select class="form-control" id="fundName" name="fund" required>
-                                    <option disabled selected></option>
-                                </select>
+                            <div class="keskele">
+                                <input id="donationSubmitButton" class="btn btn-primary btn-lg sharp" type="submit"/>
                             </div>
-                        </div>
-                        <br>
-
-                        <div class="keskele">
-                            <input id="donationSubmitButton" class="btn btn-primary btn-lg sharp" type="submit"/>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

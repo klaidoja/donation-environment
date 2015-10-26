@@ -2,12 +2,28 @@ var successFunction = function (data) {
     alert('Donation wish saved');
     var donationInformation = JSON.parse(data.responseText);
     console.log(donationInformation);
-    var $donationFormMainContent = $('#jumbo');
+    var $donationFormMainContent = $('#jumbo div');
     $donationFormMainContent.empty();
-    $donationFormMainContent.append('<div>').text(donationInformation.object.fund.paymentExplanation + '\n' + donationInformation.object.facultyBankAccountNr);
-    var doc = new jsPDF();
-    doc.text(20, 20, 'Hello world.');
-    doc.save('Test.pdf');
+    $donationFormMainContent.append('<div>').text(donationInformation.object.fund.paymentExplanation + '\n' + donationInformation.object.facultyBankAccountNr).attr('id', 'paymentInfo');
+
+
+    $('#paymentInfo').after('<div>').attr('id', 'pdfDownloadDiv');
+    $('#pdfDownloadDiv').attr('class', 'keskele');
+
+    $('<button>').text('Download PDF').attr('id', 'pdfDownloadButton').appendTo('#pdfDownloadDiv');
+    $('#pdfDownloadButton').attr('class', 'btn btn-primary btn-lg sharp');
+    $('#pdfDownloadButton').data(donationInformation.object);
+
+
+    $('#pdfDownloadButton').on('click', function (e) {
+        e.preventDefault();
+        var doc = new jsPDF();
+        doc.text(50, 20, 'This is the document containing all you need for your payment');
+        doc.text(20, 30, 'Payment reciever: ' + $('#pdfDownloadButton').data().faculty);
+        doc.text(20, 40, 'Bank account nr. for payment: ' + $('#pdfDownloadButton').data().facultyBankAccountNr);
+        doc.text(20, 50, 'Payment explanation: ' + $('#pdfDownloadButton').data().fund.paymentExplanation);
+        doc.save('Donation.pdf');
+    });
 };
 
 var notFoundFunction = function (data) {
