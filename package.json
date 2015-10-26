@@ -16,6 +16,7 @@
     "gulp-sass": "^2.0.4",
     "jquery": "1.11.3",
     "jshint-stylish": "^1.0.1",
+    "jspdf": "^1.0.272",
     "mocha": "^2.2.4",
     "normalize.css": "3.0.3",
     "run-sequence": "^1.0.2"
