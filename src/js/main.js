@@ -7,7 +7,8 @@ function loadAssets() { // jshint ignore:line
         $.getScript('js/FacultyChangeListenerRegistrar.js'),
         $.getScript('js/AdminLoginListener.js'),
         $.getScript('js/AdminDonationViewController.js'),
-        $.getScript('js/AdminSettingsViewController.js')
+        $.getScript('js/AdminSettingsViewController.js'),
+        $.getScript('js/CharacterCounterForTextarea.js')
     ];
 
     $.when(promises).done(function () {
@@ -15,4 +16,5 @@ function loadAssets() { // jshint ignore:line
         $.holdReady(false);
     });
 }
+
 
