@@ -1,5 +1,4 @@
 var successFunction = function (data) {
-    alert('Donation wish saved');
     var donationInformation = JSON.parse(data.responseText);
     console.log(donationInformation);
     var $donationFormMainContent = $('#jumbo div');
