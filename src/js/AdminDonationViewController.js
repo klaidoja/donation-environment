@@ -3,7 +3,6 @@ function loadAdminDonationsView(){
 
     $.getJSON('http://localhost:8080/api/donation')
         .done(function (result) {
-            alert('GET request for all donations succeeded');
             var $adminDonationTable = $('#adminDonationTable');
             $adminDonationTable.empty();
             result.object.forEach(function(donation){

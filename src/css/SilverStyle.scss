@@ -11,6 +11,12 @@
         font-family: 'PT Sans', sans-serif;
         color: #0099cc;
     }
+
+    #adminFund {
+        font-family: 'PT Sans Caption', sans-serif;
+        font-size: 15px;
+    }
+
     p {
         font-family: 'PT Sans', sans-serif;
         font-size: 1.1em;
@@ -120,5 +126,25 @@ body {
 #menyy {
     position: absolute;
     right:10px;
+}
 
+#adminFacultiesList {
+    label {
+        font-size: 13px;
+        color: #777777;
+    }
+}
+
+#toTheLeft {
+    position: absolute;
+    left: 25%;
+}
+.asText {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    right: 10%;
+    color: #7F5959;
 }
