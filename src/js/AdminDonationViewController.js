@@ -1,6 +1,7 @@
 function loadAdminDonationsView() {
     $('#pageContent').load('html/adminMainView.html');
 
+
     $.getJSON('http://localhost:8080/api/donation')
         .done(function (result) {
             var $adminDonationTable = $('#adminDonationTable');
@@ -20,14 +21,23 @@ function loadAdminDonationsView() {
                 $('.deleteDonation:last').data(donation);
 
 
+
+
+
             });
             listenerForDonationDeleteEvent();
             console.log(result);
+            $(document).ready(function() {
+                console.log("tablesorter is online");
+                $("#adminTable").tablesorter();
+            });
+
         })
         .fail(function (result) {
             alert("GET request for all donations failed");
         });
 }
+
 
 function listenerForDonationDeleteEvent() {
     $('.deleteDonation').on('click', function (e) {

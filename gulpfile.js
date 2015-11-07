@@ -78,7 +78,9 @@ gulp.task('copy', [
     'copy:license',
     'copy:misc',
     'copy:bootstrapJs',
-    'copy:jspdf'
+    'copy:jspdf',
+    'copy:tablesorter',
+    'copy:tablesorterCSS'
 ]);
 
 gulp.task('copy:.css', function () {
@@ -114,8 +116,18 @@ gulp.task('copy:jquery', function () {
 });
 
 gulp.task('copy:jspdf', function () {
-    return gulp.src(['node_modules/jspdf/dist/jspdf.min.js'])
+    return gulp.src(['node_modules/jspdf/dist/js/jspdf.min.js'])
         .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+});
+
+gulp.task('copy:tablesorter', function () {
+    return gulp.src(['node_modules/tablesorter/dist/js/jquery.tablesorter.min.js'])
+        .pipe(gulp.dest(dirs.dist + '/js'));
+});
+
+gulp.task('copy:tablesorterCSS', function () {
+    return gulp.src(['node_modules/tablesorter/dist/css/theme.bootstrap.min.css'])
+        .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
 
