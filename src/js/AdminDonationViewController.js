@@ -23,7 +23,6 @@ function loadAdminDonationsView() {
 
             });
             listenerForDonationDeleteEvent();
-            console.log(result);
             $(function () {
                 $("#adminTable").tablesorter();
             });
@@ -36,7 +35,15 @@ function loadAdminDonationsView() {
 
 function donationDeleted(data) {
     console.log(data);
+    var responseText = JSON.parse(data.responseText);
+    var donationId = responseText.object;
+    console.log(donationId);
     alert('Donation deleted successfully');
+    $('#' + donationId).parent().remove();
+    $(function () {
+        $("#adminTable").trigger("update");
+        $(table).trigger("appendCache");
+    });
 }
 
 function donationNotFound(data) {
@@ -56,11 +63,6 @@ function listenerForDonationDeleteEvent() {
         e.preventDefault();
 
         var donationId = $(this).data().id;
-        console.log(donationId);
-
-        var requestData = {
-            id: donationId
-        };
 
         $.ajax({
             type: 'delete',
