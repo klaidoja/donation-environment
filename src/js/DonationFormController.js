@@ -3,7 +3,7 @@ var successFunction = function (data) {
     console.log(donationInformation);
     var $donationFormMainContent = $('#jumbo div');
     $donationFormMainContent.empty();
-    $donationFormMainContent.append('<div>').text(donationInformation.object.fund.paymentExplanation + '\n' + donationInformation.object.facultyBankAccountNr).attr('id', 'paymentInfo');
+    $donationFormMainContent.append('<div>').text('Aitäh! \n').attr('id', 'paymentInfo');
 
 
     $('#paymentInfo').after('<div>').attr('id', 'pdfDownloadDiv');
