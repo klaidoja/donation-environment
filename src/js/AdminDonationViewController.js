@@ -24,8 +24,9 @@ function loadAdminDonationsView() {
             });
             listenerForDonationDeleteEvent();
             console.log(result);
-            $("#adminTable").tablesorter();
-
+            $(function(){
+                $("#adminTable").tablesorter();
+            });
 
         })
         .fail(function (result) {
