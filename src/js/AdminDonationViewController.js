@@ -21,16 +21,11 @@ function loadAdminDonationsView() {
                 $('.deleteDonation:last').data(donation);
 
 
-
-
-
             });
             listenerForDonationDeleteEvent();
             console.log(result);
-            $(document).ready(function() {
-                console.log("tablesorter is online");
-                $("#adminTable").tablesorter();
-            });
+            $("#adminTable").tablesorter();
+
 
         })
         .fail(function (result) {
@@ -52,8 +47,10 @@ function listenerForDonationDeleteEvent() {
 
         $.ajax({
             type: 'delete',
-            url: 'http://localhost:8080/api/donation/' + donationId,
+            url: 'http://localhost:8080/api/donation/',
             contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(donationId),
+            dataType: JSON,
             statusCode: {
                 200: alert('i deleted'),
                 404: alert('i failed')

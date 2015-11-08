@@ -19,7 +19,8 @@
     "jspdf": "^1.0.272",
     "mocha": "^2.2.4",
     "normalize.css": "3.0.3",
-    "run-sequence": "^1.0.2"
+    "run-sequence": "^1.0.2",
+    "tablesorter": "^2.24.3"
   },
   "engines": {
     "node": ">=0.10.0"
