@@ -24,7 +24,7 @@ function loadAdminDonationsView() {
             });
             listenerForDonationDeleteEvent();
             console.log(result);
-            $(function(){
+            $(function () {
                 $("#adminTable").tablesorter();
             });
 
@@ -34,6 +34,22 @@ function loadAdminDonationsView() {
         });
 }
 
+function donationDeleted(data) {
+    console.log(data);
+    alert('Donation deleted successfully');
+}
+
+function donationNotFound(data) {
+    var errorData = data.responseText.errors;
+    alert(errorData);
+    console.log(data);
+}
+
+function requestRejected(data) {
+    var errorData = data.responseText.errors;
+    alert(errorData);
+    console.log(data);
+}
 
 function listenerForDonationDeleteEvent() {
     $('.deleteDonation').on('click', function (e) {
@@ -48,13 +64,13 @@ function listenerForDonationDeleteEvent() {
 
         $.ajax({
             type: 'delete',
-            url: 'http://localhost:8080/api/donation/',
+            url: 'http://localhost:8080/api/donation/' + donationId,
             contentType: "application/json; charset=utf-8",
-            data: JSON.stringify(donationId),
             dataType: JSON,
             statusCode: {
-                200: alert('i deleted'),
-                404: alert('i failed')
+                200: donationDeleted,
+                404: donationNotFound,
+                401: requestRejected
             }
         });
 
