@@ -16,12 +16,6 @@
         font-family: 'PT Sans', sans-serif;
         color: #0099cc;
     }
-
-    #adminFund {
-        font-family: 'PT Sans Caption', sans-serif;
-        font-size: 15px;
-    }
-
     p {
         font-family: 'PT Sans', sans-serif;
         font-size: 1.1em;
@@ -140,7 +134,7 @@ body {
     }
 }
 
-#toTheLeft {
+.toTheLeft {
     position: absolute;
     left: 25%;
 }
@@ -152,5 +146,10 @@ body {
     position: absolute;
     right: 10%;
     color: #7F5959;
+}
+
+.adminFund {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 15px;
 }
 
