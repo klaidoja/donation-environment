@@ -8,7 +8,11 @@ function loadAdminDonationsView() {
             $adminDonationTable.empty();
             result.object.forEach(function (donation) {
                 var $donation = $('<tr>');
-                $('<td>').text(donation.dateCreated).appendTo($donation);
+                var dateCreated = new Date(donation.dateCreated);
+                var dateCreatedYear = dateCreated.getUTCFullYear();
+                var dateCreatedMonth = dateCreated.getUTCMonth() + 1;
+                var dateCreatedDay = dateCreated.getUTCDate();
+                $('<td>').text(dateCreatedYear + '-' + dateCreatedMonth + '-' + dateCreatedDay).appendTo($donation);
                 $('<td>').text(donation.name).appendTo($donation);
                 $('<td>').text(donation.faculty).appendTo($donation);
                 $('<td>').text(donation.fund.name).appendTo($donation);
