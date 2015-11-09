@@ -46,7 +46,8 @@ function donationDeleted(data) {
     $('#' + donationId).parent().remove();
     $(function () {
         $("#adminTable").trigger("update");
-        $(table).trigger("appendCache");
+        $("#adminTable").trigger("appendCache");
+        $("#adminTable").tablesorter();
     });
 }
 
