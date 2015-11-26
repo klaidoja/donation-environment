@@ -43,7 +43,15 @@ var successFunction = function (data) {
         doc.text(15, 76, 'Detailsed pangarekvisiidid: ');
         doc.setFontType('bold');
         doc.text(15, 82, 'Pank:');
-        doc.text(15, 88, 'SWIFT/BIC:')
+        doc.text(15, 88, 'SWIFT/BIC:');
+        doc.text(15, 106, 'Arvutiteaduse instituudi arvelduskontole kantud annetuste pealt ei ole võimalik tagasi saada');
+        doc.text(15, 112, 'tulumaksu. ');
+
+        doc.line(15, 270, 195, 270);
+        doc.setTextColor(0, 97, 175);
+        doc.text(15, 274, 'http://www.cs.ut.ee/');
+        doc.text(15, 280, 'https://www.facebook.com/ut.ics');
+        doc.text(15, 286, 'ics@ut.ee');
 
         doc.save('Donation.pdf');
     });
