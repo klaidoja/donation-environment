@@ -80,7 +80,8 @@ gulp.task('copy', [
     'copy:bootstrapJs',
     'copy:jspdf',
     'copy:tablesorter',
-    'copy:tablesorterCSS'
+    'copy:tablesorterCSS',
+    'copy:tableexport.js'
 ]);
 
 gulp.task('copy:.css', function () {
@@ -134,6 +135,11 @@ gulp.task('copy:tablesorterCSS', function () {
 gulp.task('copy:bootstrapJs', function () {
     return gulp.src(config.bootstrapDir + '/assets/javascripts/bootstrap.js')
         .pipe(gulp.dest(dirs.dist + '/js'));
+});
+
+gulp.task('copy:tableexport.js', function() {
+    return gulp.src(['bower_components/tableexport.js/dist/js/tableexport.min.js'])
+        .pipe(gulp.dest(dirs.dist + '/js/vendor'));
 });
 
 gulp.task('copy:license', function () {
