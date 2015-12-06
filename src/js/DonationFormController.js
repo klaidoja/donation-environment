@@ -4,14 +4,14 @@ var successFunction = function (data) {
     var $donationFormMainContent = $('#jumbo div');
     $donationFormMainContent.empty();
     $donationFormMainContent.add('<div>').attr('id', 'paymentInfo');
-    $('#paymentInfo').append('<p id = "aitah">Aitäh!</p>');
+    $('#paymentInfo').append('<h2 id = "aitah">Aitäh!</h2>');
 
 
     $donationFormMainContent.append('<div>').attr('id', 'pdfDownloadDiv');
     $('#pdfDownloadDiv').attr('class', 'keskele');
 
     $('<button>').text('Lae alla pdf').attr('id', 'pdfDownloadButton').appendTo('#pdfDownloadDiv');
-    $('#pdfDownloadButton').attr('class', 'btn btn-primary btn-lg sharp');
+    $('#pdfDownloadButton').attr('class', 'btn btn-primary btn-md sharp');
     $('#pdfDownloadButton').data(donationInformation.object);
 
 
