@@ -3,13 +3,14 @@ var successFunction = function (data) {
     console.log(donationInformation);
     var $donationFormMainContent = $('#jumbo div');
     $donationFormMainContent.empty();
-    $donationFormMainContent.append('<div>').text('Aitäh! \n').attr('id', 'paymentInfo');
+    $donationFormMainContent.add('<div>').attr('id', 'paymentInfo');
+    $('#paymentInfo').append('<p id = "aitah">Aitäh!</p>');
 
 
-    $('#paymentInfo').after('<div>').attr('id', 'pdfDownloadDiv');
+    $donationFormMainContent.append('<div>').attr('id', 'pdfDownloadDiv');
     $('#pdfDownloadDiv').attr('class', 'keskele');
 
-    $('<button>').text('Download PDF').attr('id', 'pdfDownloadButton').appendTo('#pdfDownloadDiv');
+    $('<button>').text('Lae alla pdf').attr('id', 'pdfDownloadButton').appendTo('#pdfDownloadDiv');
     $('#pdfDownloadButton').attr('class', 'btn btn-primary btn-lg sharp');
     $('#pdfDownloadButton').data(donationInformation.object);
 

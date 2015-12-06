@@ -1,37 +1,53 @@
+/***********************
+  Thank you message
+************************/
+#aitah{
+    text-align: center;
+    font-family: gesta, sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 36.4px;
+    word-spacing: 0px;
+    color: #1C619A;
+    display: inline-block;
+
+}
+
 .container {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
 }
 
 .navbar {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 15px ;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
 }
 
 #jumbo {
-    background-color: white;
-    align-content: center;
-    h3 {
-        font-family: 'PT Sans', sans-serif;
-        color: #0099cc;
-    }
-    p {
-        font-family: 'PT Sans', sans-serif;
-        font-size: 1.1em;
-        text-align: justify;
-            }
+  background-color: white;
+  align-content: center;
+  h3 {
+    font-family: 'PT Sans', sans-serif;
+    color: #0099cc;
+  }
+  p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1em;
+    text-align: justify;
+  }
 }
+
 .keskele {
-    text-align: center;
+  text-align: center;
 }
 
 .dropdown-menu {
-    width: 100%;
+  width: 100%;
 }
 
 body {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /**************************
@@ -39,37 +55,37 @@ body {
 **************************/
 
 .btn {
-    width: 60%;
-    display: inline-block;
-    padding: 6px 12px;
-    margin: 0 auto;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 10px 16px;
+  width: 60%;
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
 }
 
 .btn-lg {
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #0040D0;
-    border-color: #357ebd;
+  color: #fff;
+  background-color: #0040D0;
+  border-color: #357ebd;
 }
 
 .btn-primary:hover,
@@ -77,16 +93,16 @@ body {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    color: #fff;
-    background-color: #3276b1;
-    border-color: #285e8e;
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
 }
 
 /***********************
   SHARP BUTTONS
 ************************/
 .sharp {
-    border-radius:0;
+  border-radius: 0;
 }
 
 /***********************
@@ -94,62 +110,67 @@ body {
 ************************/
 
 .btn {
-    padding: 14px 24px;
-    border: 0 none;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
+
 .btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+  outline: 0 none;
 }
 
 .btn-primary {
-    background: #0099cc;
-    color: #ffffff;
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #33a6cc;
-}
-.btn-primary:active, .btn-primary.active {
-    background: #007299;
-    box-shadow: none;
+  background: #0099cc;
+  color: #ffffff;
 }
 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+  background: #007299;
+  box-shadow: none;
+}
 
 #navBar {
-    position: relative;
+  position: relative;
 }
 
-
 #menyy {
-    position: absolute;
-    right:10px;
+  position: absolute;
+  right: 10px;
 }
 
 #adminFacultiesList {
-    label {
-        font-size: 13px;
-        color: #777777;
-    }
+  label {
+    font-size: 13px;
+    color: #777777;
+  }
 }
 
 .toTheLeft {
-    position: absolute;
-    left: 25%;
+  position: absolute;
+  left: 25%;
 }
+
 .asText {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    position: absolute;
-    right: 10%;
-    color: #7F5959;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 10%;
+  color: #7F5959;
 }
 
 .adminFund {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 15px;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 15px;
 }
+
+
+
 
