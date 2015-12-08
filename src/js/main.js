@@ -8,7 +8,8 @@ function loadAssets() { // jshint ignore:line
         $.getScript('js/AdminLoginListener.js'),
         $.getScript('js/AdminDonationViewController.js'),
         $.getScript('js/AdminSettingsViewController.js'),
-        $.getScript('js/CharacterCounterForTextarea.js')
+        $.getScript('js/CharacterCounterForTextarea.js'),
+        $.getScript('js/LogOutListener.js')
     ];
 
     $.when(promises).done(function () {
