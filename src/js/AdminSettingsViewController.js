@@ -1,6 +1,5 @@
 function loadAdminSettingsView() {
     $('#pageContent').load('html/adminSettingsView.html');
-
     $.getJSON('http://localhost:8080/api/faculty')
         .done(function (result) {
             var $adminFacultiesList = $('#adminFacultiesList');

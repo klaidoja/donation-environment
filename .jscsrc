@@ -11,7 +11,6 @@
     "disallowSpaceBeforePostfixUnaryOperators": true,
     "disallowTrailingComma": true,
     "disallowTrailingWhitespace": true,
-    "requireCamelCaseOrUpperCaseIdentifiers": true,
     "requireCommaBeforeLineBreak": true,
     "requireCurlyBraces": true,
     "requireLineFeedAtFileEnd": true,
@@ -29,8 +28,6 @@
         "while"
     ],
     "requireSpaceBeforeBinaryOperators": true,
-    "requireSpacesInConditionalExpression": true,
-    "requireSpacesInsideObjectBrackets": "allButNested",
     "validateIndentation": 4,
     "validateLineBreaks": "LF",
     "validateParameterSeparator": ", "

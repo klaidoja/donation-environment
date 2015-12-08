@@ -1,7 +1,7 @@
 function loadAdminDonationsView() {
+    $('#loginForm').remove();
     $('#pageContent').load('html/adminMainView.html');
-
-
+    $('#loginForm').remove();
     $.getJSON('http://localhost:8080/api/donation')
         .done(function (result) {
             var $adminDonationTable = $('#adminDonationTable');
