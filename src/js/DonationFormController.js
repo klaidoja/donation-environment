@@ -79,8 +79,7 @@ $('#donationForm').on('submit', function (e) {
     fieldValues['name'] = $('#donorName').val();
     fieldValues['email'] = $('#donorEmail').val();
     fieldValues['additionalInformation'] = $('#additionalInformation').val();
-    var fundName = $('#fundName').val();
-    fieldValues['fund'] = $('.fundNameData').text(fundName).data().id;
+    fieldValues['fund'] = $('#fundName').val();
 
     $.ajax({
         type: 'post',
